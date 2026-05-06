@@ -325,16 +325,16 @@ def evaluate(model, val_loader, byol_loss, segmentation_loss, lambda_ssl, lambda
             val_byol_loss += loss_byol.item()
             val_seg_loss += loss_seg.item()
 
-            # 🔹 Predictions for metrics
+            # Predictions for metrics
             pred_classes = torch.argmax(pred, dim=1)
             all_preds.append(pred_classes.cpu().numpy().ravel())
             all_masks.append(msk.cpu().numpy().ravel())
 
-    # 🔹 Concatenate predictions and ground truth
+    # Concatenate predictions and ground truth
     all_preds = np.concatenate(all_preds)
     all_masks = np.concatenate(all_masks)
 
-    # 🔹 Metrics
+    # Metrics
     acc = accuracy_score(all_masks, all_preds)
     prec = precision_score(all_masks, all_preds, average="macro", zero_division=0)
     f1 = f1_score(all_masks, all_preds, average="macro", zero_division=0)
