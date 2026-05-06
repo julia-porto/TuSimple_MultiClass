@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 def load_multiclassdata():
-    directory = "E:\\PhD_NTUA\\3. Data\\TuSimple\\tusimple_multiclass"
+    directory = "tusimple_multiclass"
     train_path = os.path.join(directory, "train")
     valid_path = os.path.join(directory, "valid")
     test_path = os.path.join(directory, "test")
