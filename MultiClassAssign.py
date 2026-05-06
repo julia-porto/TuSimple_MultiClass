@@ -10,7 +10,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('folder', help = "Type one folder between 'test', 'valid' or 'train'")
 args = parser.parse_args()
 
-directory = "C:\\Users\\julpo\\Documents\\PhD_NTUA\\3. Data\\TuSimple\\tusimple_processed_split"
+directory = "tusimple_processed_split" ## Modify here with the original directory where you saved TuSimple data!!!
 masks_folder = os.path.join(directory, args.folder, "masks_multiclass")
 img_folder = os.path.join(directory, args.folder, "images")
 save_folder = os.path.join(directory, args.folder, "masks_assigned")
@@ -32,7 +32,7 @@ for fname in sorted(os.listdir(masks_folder)):
     save_path = os.path.join(save_folder, fname)
     img_path = os.path.join(img_folder, fname)  # assumes same name
     if not os.path.exists(img_path):
-        print(f"⚠️ No matching image for {fname}, skipping...")
+        print(f"No matching image for {fname}, skipping...")
         continue
 
     # Load mask and original image
@@ -66,4 +66,4 @@ for fname in sorted(os.listdir(masks_folder)):
 
     # Save relabeled mask with same name
     imsave(save_path, relabeled.astype(np.uint8))
-    print(f"✅ Saved relabeled mask: {save_path}")
+    print(f"Saved relabeled mask: {save_path}")
