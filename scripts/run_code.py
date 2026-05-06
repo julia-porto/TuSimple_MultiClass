@@ -58,7 +58,7 @@ model = multi_classes.BYOL_LinkNet(n_classes=4)
 optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
 seg_loss = nn.CrossEntropyLoss()
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-save_dir = "E:\\PhD_NTUA\\5_Projects\\2_AttributesExtraction\\Intersection\\TuSimple_MC_v2"
+save_dir = "save_dir"
 os.makedirs(save_dir, exist_ok=True)
 save_path = os.path.join(save_dir, "lambda2.pth")
 
