@@ -10,6 +10,8 @@ The pipeline to separate each object into separate entities consists of four ste
 
 
 
-The script used is included in the repository, for full transparency.
+The script used is included in the repository, for full transparency. Note that the input directory refers to where the 
+TuSimple original files are stored (in this case, "tusimple_processed_split"), expecting train/valid/test division.
+To reproduce the code, modify it with your own path.
 
 The labels contain some missclasifications, either due to fails in separating the labels into individual entities, or by human erros during the manual labeling.
