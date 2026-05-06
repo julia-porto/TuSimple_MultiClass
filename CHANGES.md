@@ -1,6 +1,6 @@
 To allow for multiclass segmentation, a graph-based pipeline was followed to separate the original labels into individual entities, and then each entity was manually labeled (1 - continuous, 2 - dashed, 3 - unmarked, 0 - background).
 
-The pipeline to separate each object into separate entities consists of four steps:
+The pipeline to separate each object into separate entities consists of five steps:
 
 1. thinning of segmentation mask pixels
 2. building of a graph structure from 8-level connectivity using NetworkX library
