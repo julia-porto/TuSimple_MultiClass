@@ -13,7 +13,7 @@ All changes made in the original TuSimple dataset are described in CHANGES.md
 
 To run `MultiClassAssing.py`, you will need to have downloaded the original TuSimple dataset and saved in a folder named "tusimple_processed_split" (or change the name in the python file).
 
-For the segmentation model, a LinkNet model with dual-branch BYOL/LinkNet fine-tuning was trained. The code used to train is stored in <scripts>, where:
+For the segmentation model, a LinkNet model with dual-branch BYOL/LinkNet fine-tuning was trained. The code used to train is stored in scripts, where:
 - load_metadata.py is the script to load the multiclass metadata
 - multiclasses.py contains all functions and classes
 - run_code.py actually runs the training, tests and saves it locally.
